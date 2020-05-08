@@ -1,0 +1,17 @@
+{
+  "name": "flutter-docs-ptbr",
+  "description": "Documentação do Flutter em pt-BR",
+  "author": {
+    "name": "Vinícius Ueda",
+    "email": "vnsueda@gmail.com"
+  },
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "dependencies": {
+    "v-clipboard": "^2.2.2",
+    "v-tooltip": "^2.0.3"
+  }
+}

@@ -17,3 +17,5 @@ Assim que revisado e aceito, ele será mergeado e já ficará disponível [aqui]
 Para executar o projeto em modo de desenvolvimento faça um **fork/clone** do projeto e execute o comando <code>npm run dev</code> no diretório raiz.
 
 Após terminar o build o projeto fica acessível em http://localhost:8080/flutter-docs-ptbr/.
+
+Qualquer asset ou biblioteca adicionada deve ser creditada na página **docs/creditos/README.md**

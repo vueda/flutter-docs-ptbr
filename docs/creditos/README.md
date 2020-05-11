@@ -4,14 +4,14 @@ Documentação criada com [VuePress](https://vuepress.vuejs.org/)
 
 <h2>Icones e outros assets</h2>
 
-<img src="/brazil-flag.png" class="sample-image" width="50" heigth="50"/>
+<base-path-image src="/brazil-flag.png" class="sample-image" width="50" heigth="50" />
 
 Feito por <a href="http://www.freepik.com/" title="Freepik">Freepik</a> do <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>.
 
 ---
 
-<img src="/flutter-logo-original.png" class="sample-image" width="50" heigth="50"/>
-<img src="/flutter-logo-full.png" class="sample-image" width="100" heigth="50"/>
+<base-path-image src="/flutter-logo-original.png" class="sample-image" width="50" heigth="50" />
+<base-path-image src="/flutter-logo-full.png" class="sample-image" width="100" heigth="50" />
 
 Logotipos oficiais do <a href="https://flutter.dev/" title="Flutter">Flutter</a> da <a href="https://www.google.com/" title="Google">Google</a>.
 

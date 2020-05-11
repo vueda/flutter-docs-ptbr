@@ -104,7 +104,7 @@ No Android Studio 3.6 ou mais recente, você irá precisar adicionar manualmente
 
 A imagem abaixo mostra as configurações adequadas:
 
-<img src="/instalacao/android-sdk-tools-config.png" />
+<base-path-image src="/instalacao/android-sdk-tools-config.png" />
 
 Esse é um [problema conhecido](https://github.com/flutter/flutter/issues/51712) que será tratado em versões futuras do Flutter.
 :::

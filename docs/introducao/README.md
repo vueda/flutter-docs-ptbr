@@ -15,7 +15,7 @@ Selecione o sistema operacional no qual você está instalando o Flutter:
     <card-button link="./instalacao/macos">
         macOS <i class="icon-apple"></i>
     </card-button>
-    <card-button link="./instalacao/macos">
+    <card-button link="./instalacao/linux">
         Linux <i class="icon-linux"></i>
     </card-button>
 </div>

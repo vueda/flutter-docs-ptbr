@@ -1,5 +1,9 @@
 # Documentação do Flutter em Português (pt-BR)
 
+![Build and Deploy VuePress](https://github.com/vueda/flutter-docs-ptbr/workflows/Build%20and%20Deploy%20VuePress/badge.svg)
+
+---
+
 Este projeto tem como objetivo fornecer a documentação oficial do [Flutter](https://flutter.dev/docs) traduzido para o Português Brasileiro.
 
 A versão mais recente está publicada com o GitHub Pages.

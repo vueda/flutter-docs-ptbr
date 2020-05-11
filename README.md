@@ -16,7 +16,7 @@ Esse projeto foi construído utilizando o [Vuepress](https://vuepress.vuejs.org/
 
 Para contribuir basta submeter um **Pull Request** para esse repositório com uma nova seção traduzida da documentação ou correções/atualizações.
 
-Assim que revisado e aceito, ele será mergeado e já ficará disponível [aqui](https://vueda.github.io/flutter-docs-ptbr/).
+Assim que revisado e aceito, ele será mergeado e já ficará disponível [aqui](https://vueda.github.io/flutter-docs-ptbr/). O deploy é realizado com o GitHub Actions.
 
 Para executar o projeto em modo de desenvolvimento faça um **fork/clone** do projeto e execute o comando <code>npm run dev</code> no diretório raiz.
 

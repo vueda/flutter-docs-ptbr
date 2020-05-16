@@ -24,6 +24,10 @@ Logotipos oficiais do <a href="https://flutter.dev/" title="Flutter">Flutter</a>
 
 Ícones por <a href="https://fontawesome.com/" title="Font Awesome">Font Awesome</a>. Pacote de ícones criados com <a href="http://fontello.com/" title="Fontello">Fontello</a>.
 
+---
+
+Imagens nas páginas são da documentação oficial do Flutter.
+
 <h2>Bibliotecas</h2>
 
 - [v-clipboard](https://github.com/euvl/v-clipboard)

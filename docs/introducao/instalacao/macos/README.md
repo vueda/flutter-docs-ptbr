@@ -41,11 +41,11 @@ Se você não deseja instalar a versão fixa do pacote de instalação, você po
 
 <copyable-code-block dir="$" content="git clone https://github.com/flutter/flutter.git -b stable"></copyable-code-block>
 
-3. Adicione o flutter no seu path:
+3. Adicione o <code>flutter</code> no seu path:
 
 <copyable-code-block dir="$" content='export PATH="$PATH:`pwd`/flutter/bin"'></copyable-code-block>
 
-Esse comando configura a varável <code>PATH</code> apenas para a janela do terminal **atual**. Para permanentemente adicionar o Flutter ao seu path, veja [Atualizando seu path](#atualizando-seu-path)
+Esse comando configura a variável <code>PATH</code> apenas para a janela do terminal **atual**. Para permanentemente adicionar o Flutter ao seu path, veja [Atualizando seu path](#atualizando-seu-path)
 
 4. Opcionalmente, faça o pré-download dos binários de desenvolvimento:
 
@@ -81,7 +81,9 @@ Por exemplo:
     visit https://flutter.dev/setup/#android-setup for detailed instructions.
 ```
 
-As seções seguintes descrevem como realizar essas tarefas e finalizar o processo de instação. Uma vez que você tenha instalado qualquer uma das dependências ausentes, você pode executar novamente o comando <code>flutter doctor</code> para verificar se tudo foi feito corretamente.
+As seções seguintes descrevem como realizar essas tarefas e finalizar o processo de instação.
+
+Uma vez que você tenha instalado qualquer uma das dependências ausentes, você pode executar novamente o comando <code>flutter doctor</code> para verificar se tudo foi feito corretamente.
 
 ::: warning Aviso
 A ferramenta <code>flutter</code> usa o Google Analytics para anonimamente reportar estatísticas de uso e [relatórios de falha](https://github.com/flutter/flutter/wiki/Flutter-CLI-crash-reporting). Esses dados são usados para ajudar a melhorar as ferramentas do Flutter com o decorrer do tempo.
@@ -103,7 +105,9 @@ Os passos para modificar essa variável permanentemente para todas as sessões d
 
 1. Determine qual diretório você colocou o SDK do Flutter. Você precisará disso no Passo 3.
 
-2. Abra (ou crie) o arquivo <code>rc</code> para o seu terminal. Por exemplo, macOS Mojave (e anteriores) usa o terminal Bash por padrão, então edite <code>$HOME/.bash_profile</code> ou <code>$HOME/.bashrc</code>. O macOS Catalina usa o terminal Z por padrão, então edite <code>\$HOME/.zshrc</code>. Se você está usando um terminal diferente, o caminho e nome do arquivo serão diferentes na sua máquina.
+Open (or create) the rc file for your shell. Typing echo $SHELL in your Terminal tells you which shell you’re using. If you’re using Bash, edit $HOME/.bash_profile or $HOME/.bashrc. If you’re using Z shell, edit $HOME/.zshrc. If you’re using a different shell, the file path and filename will be different on your machine.
+
+2. Abra (ou crie) o arquivo <code>rc</code> para o seu terminal. Digitando <code>echo $SHELL</code> no seu terminal irá demonstrar qual tipo de terminal você está usando. Se for o Bash, edite <code>$HOME/.bash_profile</code> ou <code>$HOME/.bashrc</code>. Se você estiver usando o terminal Z, edite <code>$HOME/.zshrc</code>. Se estiver usando um terminal diferente, o caminho e nome do arquivo serão diferentes.
 
 3. Adicione a seguinte linha e mude <code>[CAMINHO_PARA_FLUTTER]</code> para o local onde você instalou o Flutter:
 
@@ -153,9 +157,9 @@ Para se preparar para executar e testar seus aplicativos Flutter em um simulador
 
 <copyable-code-block dir="$" content='open -a Simulator'></copyable-code-block>
 
-2. Certifique-se que o seu simulador está usando um dispositivo 64-bits (iPhone 5s ou mais atual) verificandos as configurações no menu Hardware > Dispositivo do simulador.
+2. Certifique-se que o seu simulador está usando um dispositivo 64-bits (iPhone 5s ou mais atual) verificandos as configurações no menu **Hardware > Dispositivo** do simulador.
 
-3. Dependendo do tamanho da tela do seu computador, a tela de alta densidade simulada do dispositivo iOS pode transbordar da sua tela. Configure a escala do dispositivo no menu Janela > Escala do simulador.
+3. Dependendo do tamanho da tela do seu computador, a tela de alta densidade simulada do dispositivo iOS pode transbordar da sua tela. Configure a escala do dispositivo no menu **Janela > Escala** do simulador.
 
 ### Crie e execute um aplicativo Flutter simples
 
@@ -182,27 +186,33 @@ Para executar seu aplicativo Flutter em um dispositivo físico com iOS você pre
 <copyable-code-block dir="$" :contents="['sudo gem install cocoapods', 'pod setup']"></copyable-code-block>
 
 2. Siga o fluxo de assinatura do Xcode para provisionar o seu projeto:
+
    a. Abre a área de trabalho padrão do Xcode no seu projeto executando <code>open ios/Runner.xcworkspace</code> em uma janela do terminal dentro do diretório do seu projeto Flutter.
+
    b. Selecione o dispositivo no qual você quer executar seu aplicativo no seletor de dispositivos próximo ao botão de executar.
+
    c. Selecione o projeto <code>Runner</code> no painel de navegação esquerdo.
+
    d. Na página de configurações, certifique-se que o seu Time de Desenvolvimento está selecionado. A tela pode mudar dependendo de qual a sua versão do Xcode.
 
    - Para o Xcode 10, procure em Geral > Assinatura > Time
    - Para o Xcode 11 e mais recente, procure em Assinatura & Recursos > Time
-     Quando você seleciona um time, o Xcode cria e baixa os Certificados de Desenvolvimento, registra seu dispositvo na sua conta, criando e baixando o perfil de provisionamento (se necessário).
+
+   Quando você seleciona um time, o Xcode cria e baixa os Certificados de Desenvolvimento, registra seu dispositvo na sua conta, criando e baixando o perfil de provisionamento (se necessário).
+
    - Para iniciar o seu primeiro projeto de desenvolvimento do iOS, você pode precisar se autenticar no Xcode com o seu Apple ID.
 
     <base-path-image src="/instalacao/xcode-account.png" />
 
-   Desenvolvimento e teste é suportado para qualquer Apple ID. Registrar-se no Programa de Desenvolvedor da Apple é obrigatório para distribuir seus aplicativos na App Store, Para detalhes sobre os tipos de afiliação, veja [Escolhendo uma afiliação](https://developer.apple.com/support/compare-memberships).
+   Desenvolvimento e teste é suportado para qualquer Apple ID. Registrar-se no Programa de Desenvolvedor da Apple é obrigatório para distribuir seus aplicativos na App Store. Para detalhes sobre os tipos de afiliação, veja [Escolhendo uma afiliação](https://developer.apple.com/support/compare-memberships).
 
-   - A primeira vez que você conecta um disposito físico iOS para desenvolvimento, você precisar confirmar que confia tanto no Mac quanto no Certificado de Desenvolvedor nesse dispositivo. Selecione <code>Confiar</code> na janela exibida na primeira vez que conectar o disposito iOS no seu Mac.
+   - A primeira vez que você conecta um dispositivo físico iOS para desenvolvimento, você precisar confirmar que confia tanto no Mac quanto no Certificado de Desenvolvedor nesse dispositivo. Selecione <code>Confiar</code> na janela exibida na primeira vez que conectar o dispositivo iOS no seu Mac.
 
     <base-path-image src="/instalacao/trust-computer.png" />
 
-Depois, vá até o aplicativo de Configurações no seu dispositivo iOS, selecione Geral > Gerenciamento do Dispositivo e confie no seu Certificado.
+Depois, vá até o aplicativo de Configurações no seu dispositivo iOS, selecione **Geral > Gerenciamento do Dispositivo** e confie no seu Certificado.
 
-- Se a autenticação automatica falhar no Xcode, verifique se o valor em Geral > Identidade > Identificador do Pacote é unico.
+- Se a autenticação automatica falhar no Xcode, verifique se o valor em **Geral > Identidade > Identificador do Pacote** é unico.
 
   <base-path-image src="/instalacao/xcode-unique-bundle-id.png" />
 

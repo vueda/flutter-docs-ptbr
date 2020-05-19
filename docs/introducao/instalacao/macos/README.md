@@ -105,8 +105,6 @@ Os passos para modificar essa variável permanentemente para todas as sessões d
 
 1. Determine qual diretório você colocou o SDK do Flutter. Você precisará disso no Passo 3.
 
-Open (or create) the rc file for your shell. Typing echo $SHELL in your Terminal tells you which shell you’re using. If you’re using Bash, edit $HOME/.bash_profile or $HOME/.bashrc. If you’re using Z shell, edit $HOME/.zshrc. If you’re using a different shell, the file path and filename will be different on your machine.
-
 2. Abra (ou crie) o arquivo <code>rc</code> para o seu terminal. Digitando <code>echo $SHELL</code> no seu terminal irá demonstrar qual tipo de terminal você está usando. Se for o Bash, edite <code>$HOME/.bash_profile</code> ou <code>$HOME/.bashrc</code>. Se você estiver usando o terminal Z, edite <code>$HOME/.zshrc</code>. Se estiver usando um terminal diferente, o caminho e nome do arquivo serão diferentes.
 
 3. Adicione a seguinte linha e mude <code>[CAMINHO_PARA_FLUTTER]</code> para o local onde você instalou o Flutter:

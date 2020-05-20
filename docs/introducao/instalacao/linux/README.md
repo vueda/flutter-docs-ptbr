@@ -38,15 +38,15 @@ Para outros canais de release, e versões mais antigas, veja o [arquivo de SDK](
 
 2. Extraia o arquivo na localização desejada, por exemplo:
 
-<copyable-code-block dir="$" :contents="['cd ~/development', 'tar xf ~/Downloads/flutter_linux_1.17.1-stable.tar.xz']"></copyable-code-block>
+<copyable-code-block :content="['cd ~/development', 'tar xf ~/Downloads/flutter_linux_1.17.1-stable.tar.xz']" />
 
 Se você não deseja instalar a versão fixa do pacote de instalação, você pode pular os passos 1 e 2. Em vez disso, obtenha o código fonte do [repositório do Flutter](https://github.com/flutter/flutter) no GitHub, e mude as branches ou tags conforme necessário. Por exemplo:
 
-<copyable-code-block content="git clone https://github.com/flutter/flutter.git -b stable"></copyable-code-block>
+<copyable-code-block content="git clone https://github.com/flutter/flutter.git -b stable" />
 
 3. Adicione o <code>flutter</code> no seu path:
 
-<copyable-code-block dir="$" content='export PATH="$PATH:`pwd`/flutter/bin"'></copyable-code-block>
+<copyable-code-block content='export PATH="$PATH:`pwd`/flutter/bin"' />
 
 Esse comando configura a variável <code>PATH</code> apenas para a janela do terminal **atual**. Para permanentemente adicionar o Flutter ao seu path, veja [Atualizando seu path](#atualizando-seu-path)
 
@@ -54,7 +54,7 @@ Esse comando configura a variável <code>PATH</code> apenas para a janela do ter
 
 O <code>flutter</code> baixa binários de desenvolvimento específicos da plataforma conforme necessário. Para cenários onde o pré-download desses artefatos são preferíveis (como por exemplo, em ambientes fechados de build, ou com disponibilidade de rede intermitente), os binários do iOS e Android podem ser baixados antecipadamente executando:
 
-<copyable-code-block dir="$" content="flutter precache"></copyable-code-block>
+<copyable-code-block content="flutter precache" />
 
 Para opções de downloads adicionais, veja <code>flutter help precache</code>.
 
@@ -70,7 +70,7 @@ Para atualizar uma versão existente do Flutter, veja [Atualizando o flutter](ht
 
 Execute o seguinte comando para verificar se ainda existe alguma dependência que você precisará instalar para completar o processo de instalação (para informações mais detalhadas, adicione a flag <code>-v</code>):
 
-<copyable-code-block dir="$" content="flutter doctor"></copyable-code-block>
+<copyable-code-block content="flutter doctor" />
 
 Esse comando verifica o seu ambiente e mostra um relatório no terminal. O SDK do Dart já vem empacotado com o Flutter; não é necessário instalar o Dart separadamente. Verifique cuidadosamente as informações para identificar outros programas que você precise instalar ou tarefas adicionais que você precise realizar.
 
@@ -112,17 +112,17 @@ Os passos para modificar essa variável permanentemente para todas as sessões d
 
 3. Adicione a seguinte linha e mude <code>[CAMINHO_PARA_FLUTTER]</code> para o local onde você instalou o Flutter:
 
-<copyable-code-block dir="$" content='export PATH="$PATH:[CAMINHO_PARA_FLUTTER]/flutter/bin"'></copyable-code-block>
+<copyable-code-block content='export PATH="$PATH:[CAMINHO_PARA_FLUTTER]/flutter/bin"' />
 
 4. Execute <code>source \$HOME/.[rc file]</code> para atualizar a sessão atual do terminal, ou abra uma nova janela do terminal para atualizar automaticamente.
 
 5. Verifique que o diretório <code>flutter/bin</code> está agora no seu PATH executando:
 
-<copyable-code-block dir="$" content='echo $PATH'></copyable-code-block>
+<copyable-code-block content='echo $PATH' />
 
 Verifique que o <code>flutter</code> está disponível executando:
 
-<copyable-code-block dir="$" content='which flutter'></copyable-code-block>
+<copyable-code-block content='which flutter' />
 
 ## Atualizando o path diretamente
 
@@ -132,7 +132,7 @@ Em alguns casos, sua distribuição pode não obter o path permanentemente usand
 
 2. Localize o diretório <code>etc</code> na raiz do sistema, e abra o arquivo <code>profile</code> com privilégio de administrador.
 
-<copyable-code-block dir="$" content='sudo nano /etc/profile'></copyable-code-block>
+<copyable-code-block content='sudo nano /etc/profile' />
 
 3. Atualize a string PATH com a localização do diretório onde está o SDK do Flutter.
 
@@ -150,7 +150,7 @@ export PATH
 
 5. Uma vez que você inicie uma nova sessão, verifique que o comando do <code>flutter</code> está disponível executando:
 
-<copyable-code-block dir="$" content='which flutter'></copyable-code-block>
+<copyable-code-block content='which flutter' />
 
 Para mais detalhes sobre a configuração do path no Bash, veja [essa questão no StackExchange](https://unix.stackexchange.com/questions/26047/how-to-correctly-add-a-path-to-path). Para informações sobre configurar o path no terminal Z, veja [essa questão no StackOverflow](https://stackoverflow.com/questions/11530090/adding-a-new-entry-to-the-path-variable-in-zsh).
 

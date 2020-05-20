@@ -35,15 +35,15 @@ Para outros canais de release, e versões mais antigas, veja o [arquivo de SDK](
 
 2. Extraia o arquivo na localização desejada, por exemplo:
 
-<copyable-code-block dir="$" :contents="['cd ~/development', 'unzip ~/Downloads/flutter_macos_1.17.0-stable.zip']"></copyable-code-block>
+<copyable-code-block :content="['cd ~/development', 'unzip ~/Downloads/flutter_macos_1.17.0-stable.zip']" />
 
 Se você não deseja instalar a versão fixa do pacote de instalação, você pode pular os passos 1 e 2. Em vez disso, obtenha o código fonte do [repositório do Flutter](https://github.com/flutter/flutter) no GitHub, e mude as branches ou tags conforme necessário. Por exemplo:
 
-<copyable-code-block dir="$" content="git clone https://github.com/flutter/flutter.git -b stable"></copyable-code-block>
+<copyable-code-block content="git clone https://github.com/flutter/flutter.git -b stable" />
 
 3. Adicione o <code>flutter</code> no seu path:
 
-<copyable-code-block dir="$" content='export PATH="$PATH:`pwd`/flutter/bin"'></copyable-code-block>
+<copyable-code-block content='export PATH="$PATH:`pwd`/flutter/bin"' />
 
 Esse comando configura a variável <code>PATH</code> apenas para a janela do terminal **atual**. Para permanentemente adicionar o Flutter ao seu path, veja [Atualizando seu path](#atualizando-seu-path)
 
@@ -51,7 +51,7 @@ Esse comando configura a variável <code>PATH</code> apenas para a janela do ter
 
 O <code>flutter</code> baixa binários de desenvolvimento específicos da plataforma conforme necessário. Para cenários onde o pré-download desses artefatos são preferíveis (como por exemplo, em ambientes fechados de build, ou com disponibilidade de rede intermitente), os binários do iOS e Android podem ser baixados antecipadamente executando:
 
-<copyable-code-block dir="$" content="flutter precache"></copyable-code-block>
+<copyable-code-block content="flutter precache" />
 
 Para opções de downloads adicionais, veja <code>flutter help precache</code>.
 
@@ -67,7 +67,7 @@ Para atualizar uma versão existente do Flutter, veja [Atualizando o flutter](ht
 
 Execute o seguinte comando para verificar se ainda existe alguma dependência que você precisará instalar para completar o processo de instalação (para informações mais detalhadas, adicione a flag <code>-v</code>):
 
-<copyable-code-block dir="$" content="flutter doctor"></copyable-code-block>
+<copyable-code-block content="flutter doctor" />
 
 Esse comando verifica o seu ambiente e mostra um relatório no terminal. O SDK do Dart já vem empacotado com o Flutter; não é necessário instalar o Dart separadamente. Verifique cuidadosamente as informações para identificar outros programas que você precise instalar ou tarefas adicionais que você precise realizar.
 
@@ -109,17 +109,17 @@ Os passos para modificar essa variável permanentemente para todas as sessões d
 
 3. Adicione a seguinte linha e mude <code>[CAMINHO_PARA_FLUTTER]</code> para o local onde você instalou o Flutter:
 
-<copyable-code-block dir="$" content='export PATH="$PATH:[CAMINHO_PARA_FLUTTER]/flutter/bin"'></copyable-code-block>
+<copyable-code-block content='export PATH="$PATH:[CAMINHO_PARA_FLUTTER]/flutter/bin"' />
 
 4. Execute <code>source \$HOME/.[rc file]</code> para atualizar a sessão atual do terminal, ou abra uma nova janela do terminal para atualizar automaticamente.
 
 5. Verifique que o diretório <code>flutter/bin</code> está agora no seu PATH executando:
 
-<copyable-code-block dir="$" content='echo $PATH'></copyable-code-block>
+<copyable-code-block content='echo $PATH' />
 
 Verifique que o <code>flutter</code> está disponível executando:
 
-<copyable-code-block dir="$" content='which flutter'></copyable-code-block>
+<copyable-code-block content='which flutter' />
 
 ## Configurações da plataforma
 
@@ -135,7 +135,7 @@ Para desenvolver aplicativos Flutter para iOS, você precisa de um Mac com Xcode
 
 2. Configure o as ferramentas de linha de comando do Xcode para usar a nova versão instalada do Xcode executando o seguinte comando:
 
-<copyable-code-block dir="$" :contents="['sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer', 'sudo xcodebuild -runFirstLaunch']"></copyable-code-block>
+<copyable-code-block :content="['sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer', 'sudo xcodebuild -runFirstLaunch']" />
 
 Esse é o caminho correto na maioria dos casos, quando você quiser usar a versão mais atual do Xcode. Se você precisa utilizar uma versão diferente, informe o caminho desejado.
 
@@ -151,7 +151,7 @@ Para se preparar para executar e testar seus aplicativos Flutter em um simulador
 
 1. No seu Mac, encontre o Simulador pelo Spotlight ou usando o seguinte comando:
 
-<copyable-code-block dir="$" content='open -a Simulator'></copyable-code-block>
+<copyable-code-block content='open -a Simulator' />
 
 2. Certifique-se que o seu simulador está usando um dispositivo 64-bits (iPhone 5s ou mais atual) verificandos as configurações no menu **Hardware > Dispositivo** do simulador.
 
@@ -163,15 +163,15 @@ Para criar seu primeiro aplicativo Flutter e testar suas configurações, siga o
 
 1. Crie um novo aplicativo Flutter executando o seguinte comando:
 
-<copyable-code-block dir="$" content='flutter create my_app'></copyable-code-block>
+<copyable-code-block content='flutter create my_app' />
 
 2. O diretório <code>my_app</code> será criado, contendo o aplicativo inicial do Flutter. Entre nesse diretório:
 
-<copyable-code-block dir="$" content='cd my_app'></copyable-code-block>
+<copyable-code-block content='cd my_app' />
 
 3. Para executar o aplicativo no Simulador, certifique-se que o simulador está rodando e faça:
 
-<copyable-code-block dir="$" content='flutter run'></copyable-code-block>
+<copyable-code-block content='flutter run' />
 
 ## Executando em dispositivos iOS
 
@@ -179,7 +179,7 @@ Para executar seu aplicativo Flutter em um dispositivo físico com iOS você pre
 
 1. Instale e configure o CocoaPods executando os seguintes comandos:
 
-<copyable-code-block dir="$" :contents="['sudo gem install cocoapods', 'pod setup']"></copyable-code-block>
+<copyable-code-block :content="['sudo gem install cocoapods', 'pod setup']" />
 
 2. Siga o fluxo de assinatura do Xcode para provisionar o seu projeto:
 

@@ -29,7 +29,7 @@ Para instalar e executar o Flutter, seu ambiente de desenvolvimento deve cumprir
 
 1. Baixe o seguinte pacote de instalação para obter a última release de versão estável do SDK do Flutter:
 
-<link-button link="https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_1.17.0-stable.zip">flutter_macos_1.17.0-stable.zip</link-button>
+<link-button link="https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_1.17.1-stable.zip">flutter_macos_1.17.1-stable.zip</link-button>
 
 Para outros canais de release, e versões mais antigas, veja o [arquivo de SDK](https://flutter.dev/docs/development/tools/sdk/releases).
 
@@ -81,7 +81,7 @@ Por exemplo:
     visit https://flutter.dev/setup/#android-setup for detailed instructions.
 ```
 
-As seções seguintes descrevem como realizar essas tarefas e finalizar o processo de instação.
+As seções seguintes descrevem como realizar essas tarefas e finalizar o processo de instalação.
 
 Uma vez que você tenha instalado qualquer uma das dependências ausentes, você pode executar novamente o comando <code>flutter doctor</code> para verificar se tudo foi feito corretamente.
 
@@ -94,12 +94,12 @@ Ao baixar o SDK do Flutter, você concorda com os Termos de Serviço do Google.
 
 Nota: A [Política de Privacidade](https://policies.google.com/privacy) do Google descreve como os dados são controlados nesse serviço.
 
-Além disso, o Flutter incluí o SDK do Dart, que pode enviar metricas de utilização e relatórios de falha.
+Além disso, o Flutter incluí o SDK do Dart, que pode enviar métricas de utilização e relatórios de falha.
 :::
 
 ## Atualizando seu path
 
-Você pode atualizar sua variável PATH para a sessão atual no terminal, como mostrado em [Obtenha o SDK do Flutter](#obtenha-o-sdk-do-flutter). Você provavelmente irá querer atualizar essa variável permanentemente, para que você possa executar os comandos do flutter em qualquer sessão do terminal.
+Você pode atualizar sua variável PATH para a sessão atual no terminal, como mostrado em [Obtenha o SDK do Flutter](#obtenha-o-sdk-do-flutter). Você provavelmente irá querer atualizar essa variável permanentemente, para que você possa executar os comandos do <code>flutter</code> em qualquer sessão do terminal.
 
 Os passos para modificar essa variável permanentemente para todas as sessões do terminal são específicas da máquina. Tipicamente você adiciona uma linha para um arquivo que é executado toda vez que você abre um novo terminal. Por exemplo:
 
@@ -123,11 +123,11 @@ Verifique que o <code>flutter</code> está disponível executando:
 
 ## Configurações da plataforma
 
-O macOS suporta o desenvolvimento de aplicativos com Flutter em iOS, Android e Web (Versão de preview técnico). Complete pelo menos a configuração de uma das plataformas agora, para conseguir construir e executar seu primeiro aplicativo em Flutter.
+O macOS suporta o desenvolvimento de aplicativos com Flutter em iOS, Android e Web (versão de preview técnico). Complete pelo menos a configuração de uma das plataformas agora, para conseguir construir e executar seu primeiro aplicativo em Flutter.
 
 ## Configuração do iOS
 
-### Instale o Xcode
+## Instale o Xcode
 
 Para desenvolver aplicativos Flutter para iOS, você precisa de um Mac com Xcode instalado.
 
@@ -141,13 +141,11 @@ Esse é o caminho correto na maioria dos casos, quando você quiser usar a vers�
 
 3. Certifique-se que contrato de licença do Xcode está assinado abrindo o Xcode uma vez e confirmando ou executando o comando <code>sudo xcodebuild -license</code>
 
-Versões mais antigas que a última estável ainda pode funcionar, mas não são recomendadas pra o desenvolvimento com Flutter. Usando versões antigas do Xcode
-
-Versions older than the latest stable version may still work, but are not recommended for Flutter development.
+Versões mais antigas que a última estável ainda podem funcionar, mas não são recomendadas para o desenvolvimento com Flutter.
 
 Com o Xcode, você poderá executar os aplicativos Flutter em um dispositivo iOS ou em um simulador.
 
-### Configure o simulador do iOS
+## Configure o simulador do iOS
 
 Para se preparar para executar e testar seus aplicativos Flutter em um simulador do iOS, siga esses passos:
 
@@ -159,7 +157,7 @@ Para se preparar para executar e testar seus aplicativos Flutter em um simulador
 
 3. Dependendo do tamanho da tela do seu computador, a tela de alta densidade simulada do dispositivo iOS pode transbordar da sua tela. Configure a escala do dispositivo no menu **Janela > Escala** do simulador.
 
-### Crie e execute um aplicativo Flutter simples
+## Crie e execute um aplicativo Flutter simples
 
 Para criar seu primeiro aplicativo Flutter e testar suas configurações, siga os seguintes passos:
 
@@ -175,7 +173,7 @@ Para criar seu primeiro aplicativo Flutter e testar suas configurações, siga o
 
 <copyable-code-block dir="$" content='flutter run'></copyable-code-block>
 
-### Executando em dispositivos iOS
+## Executando em dispositivos iOS
 
 Para executar seu aplicativo Flutter em um dispositivo físico com iOS você precisará do gerenciador de dependências CocoaPods e uma conta de Desenvolvedor da Apple. Você também precisará configurar o Xcode para executar no dispositivo físico.
 
@@ -193,10 +191,10 @@ Para executar seu aplicativo Flutter em um dispositivo físico com iOS você pre
 
    d. Na página de configurações, certifique-se que o seu Time de Desenvolvimento está selecionado. A tela pode mudar dependendo de qual a sua versão do Xcode.
 
-   - Para o Xcode 10, procure em Geral > Assinatura > Time
-   - Para o Xcode 11 e mais recente, procure em Assinatura & Recursos > Time
+   - Para o Xcode 10, procure em **Geral > Assinatura > Time**
+   - Para o Xcode 11 e mais recente, procure em **Assinatura & Recursos > Time**
 
-   Quando você seleciona um time, o Xcode cria e baixa os Certificados de Desenvolvimento, registra seu dispositvo na sua conta, criando e baixando o perfil de provisionamento (se necessário).
+   Quando você seleciona um time, o Xcode cria e baixa os Certificados de Desenvolvimento, registra seu dispositivo na sua conta, criando e baixando o perfil de provisionamento (se necessário).
 
    - Para iniciar o seu primeiro projeto de desenvolvimento do iOS, você pode precisar se autenticar no Xcode com o seu Apple ID.
 
@@ -204,13 +202,13 @@ Para executar seu aplicativo Flutter em um dispositivo físico com iOS você pre
 
    Desenvolvimento e teste é suportado para qualquer Apple ID. Registrar-se no Programa de Desenvolvedor da Apple é obrigatório para distribuir seus aplicativos na App Store. Para detalhes sobre os tipos de afiliação, veja [Escolhendo uma afiliação](https://developer.apple.com/support/compare-memberships).
 
-   - A primeira vez que você conecta um dispositivo físico iOS para desenvolvimento, você precisar confirmar que confia tanto no Mac quanto no Certificado de Desenvolvedor nesse dispositivo. Selecione <code>Confiar</code> na janela exibida na primeira vez que conectar o dispositivo iOS no seu Mac.
+   - A primeira vez que você conecta um dispositivo físico iOS para desenvolvimento, você precisa confirmar que confia tanto no Mac quanto no Certificado de Desenvolvedor nesse dispositivo. Selecione <code>Confiar</code> na janela exibida na primeira vez que conectar o dispositivo iOS no seu Mac.
 
     <base-path-image src="/instalacao/trust-computer.png" />
 
 Depois, vá até o aplicativo de Configurações no seu dispositivo iOS, selecione **Geral > Gerenciamento do Dispositivo** e confie no seu Certificado.
 
-- Se a autenticação automatica falhar no Xcode, verifique se o valor em **Geral > Identidade > Identificador do Pacote** é unico.
+- Se a autenticação automática falhar no Xcode, verifique se o valor em **Geral > Identidade > Identificador do Pacote** é unico.
 
   <base-path-image src="/instalacao/xcode-unique-bundle-id.png" />
 
@@ -224,7 +222,7 @@ O Flutter depende de uma instalação completa do Android Studio para fornecer t
 
 :::
 
-### Instalação do Android Studio
+## Instalação do Android Studio
 
 1. Baixe e instale o [Android Studio](https://developer.android.com/studio).
 2. Inicie o Android Studio, e siga o "Assistente de Instalação do Android Studio". Ele irá instalar o SDK do Android mais recente, as ferramentas de linha de comando do Android SDK, e as ferramentas de construção do Android Studio, que são necessárias pelo Flutter ao desenvolver para Android.
@@ -244,7 +242,7 @@ A imagem abaixo mostra as configurações adequadas:
 Esse é um [problema conhecido](https://github.com/flutter/flutter/issues/51712) que será tratado em versões futuras do Flutter.
 :::
 
-### Configuração do seu dispositivo Android
+## Configuração do seu dispositivo Android
 
 Para se preparar para executar e testar seus aplicativos Flutter em um dispositivo Android, você irá precisar de um dispositivo rodando o Android 4.1 (API level 16) ou mais recente.
 
@@ -253,23 +251,23 @@ Para se preparar para executar e testar seus aplicativos Flutter em um dispositi
 3. Usando um cabo USB, plugue seu celular no computador. Se solicitado no seu dispositivo, autorize o computador a acessar seu dispositivo.
 4. No terminal, execute o comando <code>flutter devices</code> para verificar se o Flutter reconhece o seu dispositivo Android conectado. Por padrão, o Flutter utiliza a versão do SDK do Android onde a sua ferramenta <code>adb</code> está baseada. Se você deseja que o Flutter use uma instalação diferente da SDK do Android, você deve configurar a variável de ambiente <code>ANDROID_HOME</code> para esse diretório de instalação.
 
-### Configuração de um emulador Android
+## Configuração de um emulador Android
 
 Para se preparar para executar e testar seus aplicativos Flutter em um emulador Android, siga esses passos:
 
 1. Habilite a [Aceleração de Hardware](https://developer.android.com/studio/run/emulator-acceleration) na sua máquina.
 2. Execute **Android Studio > Ferramentas > Android > AVD Manager** e selecione **Criar um Dispositivo Virtual**. (O submenu **Android** só está presente dentro de um projeto Android.)
-3. Selecione um dispositivo e selecione **Próximo**
-4. Selecione uma ou mais imagens de sistema para as versões do Android que você quer emular, e selecione **Próximo** Uma image _x86_ ou _x86_64_ é recomendada.
-5. Em **Performance Emulada**, selecione **Hardware - GLES 2.0** para habilitar a [aceleração por hardware](https://developer.android.com/studio/run/emulator-acceleration).
+3. Escolha um dispositivo e selecione **Próximo**
+4. Escolha uma ou mais imagens de sistema para as versões do Android que você quer emular, e selecione **Próximo** Uma imagem _x86_ ou _x86_64_ é recomendada.
+5. Em Performance Emulada, selecione **Hardware - GLES 2.0** para habilitar a [aceleração por hardware](https://developer.android.com/studio/run/emulator-acceleration).
 6. Verifique se a configuração do AVD está correta, e selecione **Finalizar**.
    Para detalhes dos passos acima, veja [Gerenciando AVDs](https://developer.android.com/studio/run/managing-avds)
 7. No Gerenciador de Dispositivos Virtuais do Android, clique **Executar** na barra de ferramentas. O emulador irá iniciar e mostrar a tela inicial para a versão e dispositivo selecionado.
 
-### Configuração Web
+## Configuração Web
 
 O Flutter tem um suporte antecipado para construção de aplicações web usando o canal <code>beta</code> do Flutter. Para adicionar suporte ao desenvolvimento web, siga [essas instruções](https://flutter.dev/docs/get-started/web) quando você tiver completado as configurações acima.
 
-### Próximo passo
+## Próximo passo
 
 Configurar o seu editor preferido.

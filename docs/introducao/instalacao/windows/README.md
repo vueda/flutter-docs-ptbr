@@ -34,7 +34,7 @@ Para outros canais de release, e versões mais antigas, veja o [arquivo de SDK](
 
 Se você não deseja instalar a versão fixa do pacote de instalação, você pode pular os passos 1 e 2. Em vez disso, obtenha o código fonte do [repositório do Flutter](https://github.com/flutter/flutter) no GitHub, e mude as branches ou tags conforme necessário. Por exemplo:
 
-<copyable-code-block content="git clone https://github.com/flutter/flutter.git -b stable"></copyable-code-block>
+<copyable-code-block theme="win" content="git clone https://github.com/flutter/flutter.git -b stable" />
 
 Agora você está pronto para executar os comandos do Flutter no Console do Flutter!
 
@@ -53,7 +53,7 @@ Note que você precisa fechar e reabrir qualquer terminal do Windows para que as
 
 De uma janela do terminal que tenha o diretório do Flutter no path (veja acima), execute o seguinte comando para verificar se existe alguma dependência para a plataforma que você necessita para completar a configuração:
 
-<copyable-code-block dir="C:\src\flutter>" content="flutter doctor"></copyable-code-block>
+<copyable-code-block theme="win" dir="C:\src\flutter>" content="flutter doctor" />
 
 Esse comando verifica seu ambiente e mostra um relatório do estado da sua instalação do Flutter. Verifique cuidadosamente as informações para identificar outros programas que você precise instalar ou tarefas adicionais que você precise realizar.
 

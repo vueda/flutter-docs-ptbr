@@ -1,24 +1,32 @@
 <template>
-  <pre class="code-box">
-    <code class="code"><div class="code-line" v-for="(block, index) in codeBlocks">{{dir}} {{ block }}</div></code>
+  <pre :class="{ 'code-box': isWin, 'dark-code-box': isMacOrLinux }">
+    <code :class="{ 'code': isWin, 'dark-code': isMacOrLinux }"><div v-for="block in codeBlocks">{{currentDir}} {{ block }}</div></code>
     <i v-tooltip="tooltip" @click="copy" class="icon-docs copy-icon"></i>
   </pre>
 </template>
 
 <script>
+const dirs = {
+  win: "C:\src>",
+  mac_lin: "$",
+};
+
 export default {
   props: {
-    content: {
+    dir: {
       type: String,
       default: "",
     },
-    contents: {
-      type: Array,
+    content: {
+      type: [Array, String],
       default: () => [],
     },
-    dir: {
+    theme: {
       type: String,
-      default: "C:\src>",
+      default: "mac_lin",
+      validator: function(value) {
+        return ["win", "mac_lin"].indexOf(value) !== -1;
+      },
     },
   },
   data() {
@@ -32,16 +40,26 @@ export default {
   },
   methods: {
     copy() {
-      this.$clipboard(this.content || this.contents.join(" && "));
+      this.$clipboard(this.codeBlocks.join(" && "));
       this.tooltip.content = "Copiado!";
       setTimeout(() => {
         this.tooltip.content = "Clique para copiar";
       }, 800);
     },
   },
+
   computed: {
+    currentDir() {
+      return this.dir || dirs[this.theme];
+    },
     codeBlocks() {
-      return this.content ? [this.content] : this.contents;
+      return typeof this.content === "string" ? [this.content] : this.content;
+    },
+    isMacOrLinux() {
+      return this.theme === "mac_lin";
+    },
+    isWin() {
+      return this.theme === "win";
     },
   },
 };
@@ -54,10 +72,19 @@ export default {
     cursor pointer
     margin-bottom 5px
 
+.dark-code-box
+    background-color #212121
+    border 1px solid #dee2e6
+    display flex
+
 .code-box
     background-color #f8f9fa
     border 1px solid #dee2e6
     display flex
+
+.dark-code
+    color #64DD17
+    flex-grow 9
 
 .code
     color #212529

@@ -21,8 +21,7 @@ export default {
 .card
     flex-grow 1
     border 1px solid #80808042
-    margin-right 0.5rem
-    margin-left 0.5rem
+    margin 0.5rem
     border-radius 4px
     cursor pointer
     text-decoration none !important

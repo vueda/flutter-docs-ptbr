@@ -26,7 +26,7 @@ Para instalar e executar o Flutter, seu ambiente de desenvolvimento deve cumprir
   - xz-utils
   - zip
 - **Bibliotecas compartilhadas**: O comando <code>test</code> do Flutter depende da seguinte biblioteca estar disponível no seu ambiente:
-  - libGLU.so.1 - Provido pelos pacotes mesa como libglu1-mesa on Ubuntu/Debian
+  - libGLU.so.1 - Provido pelos pacotes mesa como libglu1-mesa no Ubuntu/Debian
 
 ## Obtenha o SDK do Flutter
 
@@ -84,7 +84,7 @@ Por exemplo:
     visit https://flutter.dev/setup/#android-setup for detailed instructions.
 ```
 
-As seções seguintes descrevem como realizar essas tarefas e finalizar o processo de instação.
+As seções seguintes descrevem como realizar essas tarefas e finalizar o processo de instalação.
 
 Uma vez que você tenha instalado qualquer uma das dependências ausentes, você pode executar novamente o comando <code>flutter doctor</code> para verificar se tudo foi feito corretamente.
 
@@ -97,12 +97,12 @@ Ao baixar o SDK do Flutter, você concorda com os Termos de Serviço do Google.
 
 Nota: A [Política de Privacidade](https://policies.google.com/privacy) do Google descreve como os dados são controlados nesse serviço.
 
-Além disso, o Flutter incluí o SDK do Dart, que pode enviar metricas de utilização e relatórios de falha.
+Além disso, o Flutter incluí o SDK do Dart, que pode enviar métricas de utilização e relatórios de falha.
 :::
 
 ## Atualizando seu path
 
-Você pode atualizar sua variável PATH para a sessão atual no terminal, como mostrado em [Obtenha o SDK do Flutter](#obtenha-o-sdk-do-flutter). Você provavelmente irá querer atualizar essa variável permanentemente, para que você possa executar os comandos do flutter em qualquer sessão do terminal.
+Você pode atualizar sua variável PATH para a sessão atual no terminal, como mostrado em [Obtenha o SDK do Flutter](#obtenha-o-sdk-do-flutter). Você provavelmente irá querer atualizar essa variável permanentemente, para que você possa executar os comandos do <code>flutter</code> em qualquer sessão do terminal.
 
 Os passos para modificar essa variável permanentemente para todas as sessões do terminal são específicas da máquina. Tipicamente você adiciona uma linha para um arquivo que é executado toda vez que você abre um novo terminal. Por exemplo:
 
@@ -162,7 +162,7 @@ O Flutter depende de uma instalação completa do Android Studio para fornecer t
 
 :::
 
-### Instalação do Android Studio
+## Instalação do Android Studio
 
 1. Baixe e instale o [Android Studio](https://developer.android.com/studio).
 2. Inicie o Android Studio, e siga o "Assistente de Instalação do Android Studio". Ele irá instalar o SDK do Android mais recente, as ferramentas de linha de comando do Android SDK, e as ferramentas de construção do Android Studio, que são necessárias pelo Flutter ao desenvolver para Android.
@@ -187,20 +187,20 @@ Esse é um [problema conhecido](https://github.com/flutter/flutter/issues/51712)
 3. Usando um cabo USB, plugue seu celular no computador. Se solicitado no seu dispositivo, autorize o computador a acessar seu dispositivo.
 4. No terminal, execute o comando <code>flutter devices</code> para verificar se o Flutter reconhece o seu dispositivo Android conectado. Por padrão, o Flutter utiliza a versão do SDK do Android onde a sua ferramenta <code>adb</code> está baseada. Se você deseja que o Flutter use uma instalação diferente da SDK do Android, você deve configurar a variável de ambiente <code>ANDROID_HOME</code> para esse diretório de instalação.
 
-### Configuração de um emulador Android
+## Configuração de um emulador Android
 
 Para se preparar para executar e testar seus aplicativos Flutter em um emulador Android, siga esses passos:
 
 1. Habilite a [Aceleração de Hardware](https://developer.android.com/studio/run/emulator-acceleration) na sua máquina.
 2. Execute **Android Studio > Ferramentas > Android > AVD Manager** e selecione **Criar um Dispositivo Virtual**. (O submenu **Android** só está presente dentro de um projeto Android.)
-3. Selecione um dispositivo e selecione **Próximo**
-4. Selecione uma ou mais imagens de sistema para as versões do Android que você quer emular, e selecione **Próximo** Uma image _x86_ ou _x86_64_ é recomendada.
+3. Escolha um dispositivo e selecione **Próximo**
+4. Escolha uma ou mais imagens de sistema para as versões do Android que você quer emular, e selecione **Próximo** Uma imagem _x86_ ou _x86_64_ é recomendada.
 5. Em **Performance Emulada**, selecione **Hardware - GLES 2.0** para habilitar a [aceleração por hardware](https://developer.android.com/studio/run/emulator-acceleration).
 6. Verifique se a configuração do AVD está correta, e selecione **Finalizar**.
    Para detalhes dos passos acima, veja [Gerenciando AVDs](https://developer.android.com/studio/run/managing-avds)
 7. No Gerenciador de Dispositivos Virtuais do Android, clique **Executar** na barra de ferramentas. O emulador irá iniciar e mostrar a tela inicial para a versão e dispositivo selecionado.
 
-### Configuração Web
+## Configuração Web
 
 O Flutter tem um suporte antecipado para construção de aplicações web usando o canal <code>beta</code> do Flutter. Para adicionar suporte ao desenvolvimento web, siga [essas instruções](https://flutter.dev/docs/get-started/web) quando você tiver completado as configurações acima.
 

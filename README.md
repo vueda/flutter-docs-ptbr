@@ -58,11 +58,20 @@ Execute os seguintes passos:
 ## Como criar o Pull request?
 
 1. Execute os passos descritos em [Como executo o projeto localmente?](#como-executo-o-projeto-localmente)
-2. Crie uma nova branch, por exemplo, <code>feature/nova-doc</code>
-3. Altere ou crie os arquivos desejados
-4. Se um novo asset ou biblioteca for adicionado, coloque os créditos na página **docs/creditos/README.md**
-5. Faça o <code>commit</code> e <code>push</code> das alterações
-6. Crie o [Pull request](https://github.com/vueda/flutter-docs-ptbr/pulls) para a branch **master**
+2. Crie uma nova [issue](https://github.com/vueda/flutter-docs-ptbr/issues/new) preenchendo as seguintes informações:
+
+   - Preencha o título e a descrição com informações sobre a tarefa sendo executada (Ex: Tradução da seção X)
+   - Em **Assignees** coloque o seu próprio usuário
+   - Em **Labels** coloque **documentation**
+   - Em **Projects** selecione o projeto **Tarefas**
+
+   Essa issue tem a finalidade de registrar tarefas em execução evitando duplicidade.
+
+3. Crie uma nova branch, por exemplo, <code>feature/nova-doc</code>
+4. Altere ou crie os arquivos desejados
+5. Se um novo asset ou biblioteca for adicionado, coloque os créditos na página **docs/creditos/README.md**
+6. Faça o <code>commit</code> e <code>push</code> das alterações
+7. Crie o [Pull request](https://github.com/vueda/flutter-docs-ptbr/pulls) para a branch **master**
 
 ## Quando as minhas alterações ficam disponíveis?
 
